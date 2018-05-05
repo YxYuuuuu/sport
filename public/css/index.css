@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/*banner*/
+@keyframes slider {
+    0%{opacity: 1;}
+    20%{opacity: 0;}
+
+    21%{opacity: 0;}
+    60%{opacity: 0;}
+
+    61%{opacity: 0;}
+    80%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+.flash-container{
+    width: 100%;height: 600px;position: relative;
+}
+
+.flash-wrap{
+    position: relative;
+}
+.flash-wrap img{
+    width: 100%;height: 600px;position: absolute;top:0px;left: 0px;
+}
+.flash-wrap .transition{
+    animation: slider 20s linear infinite ;
+}
+
+.flash-info{
+    position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);text-align: center;
+}
+.flash-info h1{
+    font-size: 52px;font-weight: bold;color: white;margin-bottom: 30px;
+}
+.flash-info span{
+    display: inline-block;width: 220px;height: 50px;background: white;text-align:center;line-height: 50px;color: #001d5d;cursor: pointer;font-size: 13px;font-weight: bold;
+}
+.flash-info span:hover{
+    background: rgb(240, 240, 240);
+}
+
+/*3个部分相同
+---------------------------------------------*/
+.same-container{
+    width: 94%;margin: 60px auto;
+}
+.same-container .title{
+    width: 100%;height: 35px;border-bottom: 1px solid #898989;
+}
+.title .first-title{
+    font-size: 20px;margin-right: 5px;font-weight: bold;display: inline-block;width: 80px;height: 36px;border-bottom: 2px solid #001d5d;
+}
+.title .sub-title{
+    font-size: 15px;color: #898989;
+}
+
+/*关于我们
+---------------------------------------*/
+.about-wrap{
+    width: 95%;margin: 30px auto;position: relative;
+}
+.about-wrap img{
+    width: 100%;
+}
+.about-wrap .about-info{
+    width: 45%;height: 206px;position: absolute;top: 20%;left: 20px;box-shadow: 0px 0px 20px 1px #fff inset;
+    border-radius: 10px;padding: 10px 0 0 15px;
+}
+.about-info h1{
+    font-size: 24px;font-weight: lighter;
+}
+.about-info p{
+    font-size: 14px;text-indent: 2em;width: 96%;margin-top: 30px;line-height: 26px;
+}
+
+/*热卖商品
+--------------------------------------------*/
+.products-info{
+    width: 95%;margin: 30px auto;position: relative;display: flex;justify-content: space-between;flex-wrap: wrap;
+}
+.products-info li{
+    width: 24%;height: 340px;margin-bottom: 30px;border: 1px solid #898989;cursor: pointer;text-align: center;
+}
+.products-info li:hover{
+    box-shadow: 0 0 30px 3px #d3d3d3;
+    transform: translateY(-5px);
+}
+.products-info .img{
+    width: 92%;text-align: center;margin: 0 auto;
+}
+.products-info .img img{
+    width: 94%;margin: 20px auto;
+}
+.products-info li:hover .img img{
+    transform: scale(1.1);
+    transition: transform .5s linear;
+}
+.products-info li p{
+font-size: 15px;line-height: 50px;color: #555555;
+}
+.products-info li .line{
+    width: 0%;height: 1px;background: #898989;
+}
+.products-info li:hover .line{
+    width: 100%;height: 1px;background: #898989;transition: width .5s linear;
+}
+/*最热资讯
+------------------------------------------*/
+.news-container .news-info{
+    display: flex;justify-content: space-between; width: 95%;height:450px;margin: 30px auto;position: relative;
+}
+.news-info .article{
+    width: 67%;height: 100%;display: flex;flex-direction: column;justify-content: space-between;
+}.article .article-info{
+    width: 100%;height: 48%;border: 1px solid #898989;display: flex;align-items: center;
+ }
+.article-info img{
+    width: 285px;height: 200px;
+}
+.article-info .article-txt{
+    width: 64%;height: 95%;margin: 30px 0 0 10px ;
+}
+.article-txt h1{
+    font-size: 16px;color: #333;
+}
+.article-txt .date{
+    font-size: 13px;color: #999;margin: 10px 0 20px 0 ;
+}
+.article-txt .article-details{
+    font-size: 14px;color: #777;
+}
+
+
+
+.news-info .picture{
+    width: 31%;height: 100%;
+}
+.picture img{
+    width: 100%;height: 450px;
+}
+
+/*滚动条
+-------------------------------------------*/
+.scroll-container .scroll{
+    width: 100%;height: 800px;
+}
+.scroll-container .scroll:first-child{
+    background: url(../imgs/index/flash-1.jpg) no-repeat fixed;background-size: cover;
+}
+.scroll-container .scroll:nth-child(2){
+    background: url(../imgs/index/flash-2.jpg) no-repeat fixed;background-size: cover;
+}
+.scroll-container .scroll:last-child{
+    background: url(../imgs/index/flash-3.jpg) no-repeat fixed;background-size: cover;
+}
+
+.scroll-txt{
+    width: 500px;height: 125px;text-align: center;
+}
+.scroll-txt h1{
+    font-size: 52px;font-weight: bold;margin-bottom: 50px;color: white;
+}
+.scroll-txt p {
+    font-size: 16px;color: white;line-height:30px;
+}
+
+/*侧边栏
+-----------------------------------*/
+.contact-list{
+    width: 55px;height: 165px;background: black;position: fixed;top: 50%;right: 0px;transform: translateY(-50%);cursor: pointer;
+}
+.contact-list li{
+    width: 55px;height: 55px;
+}
+.contact-list li:last-child{
+   background: #1365f2;
+}
+.contact-list li span{
+    display: inline-block;width: 30px;height:30px;
+}
+.contact-list .tel span{
+    background: url(../imgs/index/pic.png) 30px  0;
+}
+.contact-list .qq span{
+    background: url(../imgs/index/pic.png) 30px -40px;
+}
+.contact-list .top span{
+    background: url(../imgs/index/pic.png) 30px -264px;
+}
